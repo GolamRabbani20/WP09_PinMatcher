@@ -66,21 +66,23 @@ function calculate(Btn_value){
 
 var k = 3
 document.getElementById('submit').addEventListener('click', function(){
-    if (k>=1){
-        if (getPinInput.value == Display.value){
-            document.getElementById('match').style.display = 'block'
-            document.getElementById('notMatch').style.display = 'none'
-        }
-        else{
-            document.getElementById('notMatch').style.display = 'block'
-            document.getElementById('match').style.display = 'none'
-        }
+    if (k>=1 && getPinInput.value == Display.value){ 
+        document.getElementById('match').style.display = 'block'
+        document.getElementById('notMatch').style.display = 'none'
+        document.getElementById('tryLeft').style.display = 'none'
+    }   
+        
+    else if(k>1 && getPinInput.value != Display.value){
+        document.getElementById('notMatch').style.display = 'block'
+        document.getElementById('match').style.display = 'none'
         document.getElementById('tryLeft').innerText =  k-1 + ' try left'
         k--
-    }
+    }          
     else{
-        document.getElementById('tryLeft').innerText = 'Sorry!! No try left'
-    }
-    
+        document.getElementById('tryLeft').innerText = 'Sorry!!! No more try left.'
+        //document.getElementById('wholeSection').style.display = 'none'
+        document.getElementById('tryLeft').style.fontWeight = 'bold'
+        document.getElementById('tryLeft').style.color = 'tomato'
+        document.getElementById('tryLeft').style.fontSize = '25px'
+    }  
 })
-
