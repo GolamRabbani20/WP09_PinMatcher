@@ -79,7 +79,7 @@ document.getElementById('submit').addEventListener('click', function(){
         k--
     }          
     else{
-        document.getElementById('tryLeft').innerText = 'Sorry!!! No more try left.'
+        document.getElementById('tryLeft').innerText = 'Sorry! No more try left.'
         //document.getElementById('wholeSection').style.display = 'none'
         document.getElementById('tryLeft').style.fontWeight = 'bold'
         document.getElementById('tryLeft').style.color = 'tomato'
